@@ -89,7 +89,7 @@ export const Calculator: React.FC = () => {
         <Drawer>
           <div className="flex justify-between items-stretch">
             <ul className={"w-full flex items-center gap-2 text-slate-600 overflow-x-auto"}>
-              {grades.toReversed().map((grade) => {
+              {[...grades].reverse().map((grade) => {
                 const isRemoved = gradesToRemove.includes(grade.id);
                 const width = grade.value > 9 ? "20px" : "14px";
                 return (
@@ -123,7 +123,7 @@ export const Calculator: React.FC = () => {
               </DrawerHeader>
               <div className="p-4 pb-0">
                 <ul className="w-full max-h-[50dvh] flex flex-col gap-2 overflow-x-auto">
-                  {grades.toReversed().map((grade) => {
+                  {[...grades].reverse().map((grade) => {
                     const isRemoved = gradesToRemove.includes(grade.id);
                     const height = "50px";
                     return (
