@@ -14,16 +14,12 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@master
 
-#      - name: Node.js setup
-#        uses: actions/setup-node@v2
-#        with:
-#          node-version: '18'
-#          cache: 'npm'
-
-      - name: Install Dependencies
+      - name: BUN setup
         uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+
+      - name: Install Dependencies
         run: bun install
 
       - name: Build for production
