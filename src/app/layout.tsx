@@ -18,9 +18,11 @@ export const metadata: Metadata = {
   title: "Калькулятор",
   description: "Калькулятор для розрахунку середнього арифметичного",
   generator: "Next.js",
-  manifest: "/manifest.json",
+  manifest:
+    process.env.NODE_ENV === "production"
+      ? "https://yuriybl.github.io/projects/calculator/manifest.json"
+      : "/manifest.json",
   authors: [
-    { name: "Yurii Bliusiuk" },
     {
       name: "Yurii Bliusiuk",
       url: "https://www.linkedin.com/in/yuriybl/",

@@ -8,6 +8,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development", // Remove console.log in production
   },
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://yuriybl.github.io/projects/calculator/' : '',
 };
 
 const withPWA = makeWithPWA({
