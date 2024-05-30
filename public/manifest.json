@@ -8,7 +8,7 @@
   "start_url":"/project/calculator/",
   "display":"standalone",
   "orientation": "portrait",
-  "scope": "/project/calculator/",
+  "scope": "/",
   "theme_color":"#ffffff",
   "background_color":"#ffffff"
 }

@@ -45,7 +45,7 @@ export default async function RootLayout({
   const appVersion = await getAppVersion();
 
   return (
-    <html lang="ua">
+    <html lang="uk">
       <body className={cn(inter.className, "!h-dvh w-full flex flex-col")}>
         <ThemeProvider
           attribute="class"
