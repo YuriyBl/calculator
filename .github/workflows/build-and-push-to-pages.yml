@@ -14,17 +14,20 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@master
 
-      - name: Node.js setup
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18'
-          cache: 'npm'
+#      - name: Node.js setup
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: '18'
+#          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+        run: bun install
 
       - name: Build for production
-        run: npm run build
+        run: bun run build
 
       - name: Deploy to Github pages
         uses: cpina/github-action-push-to-another-repository@main
